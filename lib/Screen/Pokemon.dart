@@ -3,16 +3,10 @@ import 'package:get/get.dart';
 import 'package:pokedex2/Controller/Controller.dart';
 import 'package:pokedex2/Model/PokemonModel.dart';
 
-class PokemonView extends StatefulWidget {
+class PokemonView extends StatelessWidget {
   PokemonView({Key? key}) : super(key: key);
 
-  @override
-  State<PokemonView> createState() => _PokemonViewState();
-}
-
-class _PokemonViewState extends State<PokemonView> {
   final PokemonController pokemonController = Get.put(PokemonController());
-
   int index = 0;
 
   @override

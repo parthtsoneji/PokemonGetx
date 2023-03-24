@@ -20,6 +20,7 @@ class PokemonController extends GetxController {
       var url = Uri.parse('https://pokeapi.co/api/v2/pokemon');
       var response = await http.get(url);
       if (response.statusCode == 200) {
+        print(response);
         pokeDexModal.value = json.decode(response.body)['results'];
       } else {
         print('Request failed with status: ${response.statusCode}.');
