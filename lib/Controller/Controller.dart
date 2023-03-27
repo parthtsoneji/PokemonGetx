@@ -7,13 +7,11 @@ import '../Model/PokemonModel.dart';
 class PokemonController extends GetxController {
   var pokeDexModal = [].obs;
   var isLoading = false.obs;
-
   @override
   void onInit() {
     super.onInit();
     getApi();
   }
-
   getApi() async {
     try {
       isLoading(true);

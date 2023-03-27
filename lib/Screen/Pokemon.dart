@@ -15,8 +15,7 @@ class PokemonView extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Pokemon Api Calling"),
       ),
-      body: GetBuilder<PokemonController>(
-        builder: (controller) {
+      body:Obx(() {
           if (pokemonController.pokeDexModal.isEmpty) {
             return const Center(
               child: CircularProgressIndicator(),
